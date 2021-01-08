@@ -1,16 +1,3 @@
-// Code below works on 
-// - https://www.linkedin.com/
-// - https://www.pracuj.pl/
-// - https://www.praca.pl/
-// - https://neuvoo.pl/
-
-// Tested browsers (Linux Lubuntu 18)
-// - Brave
-// - Chrome
-
-// Core function copyToClipboard from
-// - https://stackoverflow.com/a/33928558/12474392
-
 function copyToClipboard (text) {
     if (window.clipboardData && window.clipboardData.setData) {
         return clipboardData.setData("Text", text); 
@@ -31,26 +18,31 @@ function copyToClipboard (text) {
       }
     }
   }
-  function copyFromLinkedIn() {
-    let jobTitle = document.getElementsByClassName("jobs-top-card__job-title")[0].innerText;
-    if (document.getElementsByClassName("jobs-top-card__company-url")[0] != null) {
-      var companyName = document.getElementsByClassName("jobs-top-card__company-url")[0].innerText;
-    } 
-    else { 
-      var companyName = document.getElementsByClassName("jobs-top-card__company-info")[0].childNodes[4].textContent;
-    }
+
+  function copyFromLinkedInSearchPage() {
+    const jobTitle = document.getElementsByClassName('jobs-details-top-card__job-title')[0].innerText;
+    const companyName = document.getElementsByClassName("jobs-details-top-card__company-url")[0].innerText;
     return jobTitle + ";" + companyName;
   }
+
+  function copyFromLinkedInOfferPage() {
+    const jobTitle = document.getElementsByClassName('t-24')[0].innerText;
+    const companyName = document.getElementById('ember333').innerText;;
+    return jobTitle + ";" + companyName;
+  }
+
   function copyFromPracujPl() {
     let jobTitle = document.getElementsByClassName("OfferView1Z5qAH")[0].innerText;
     let companyName = document.getElementsByClassName("OfferViewFf0I7D")[0].childNodes[0].nodeValue;
     return jobTitle + ";" + companyName
   }
+
   function copyFromNeuvoo() {
     let jobTitle = document.getElementById("job-meta-title").innerText;
     let companyName = document.getElementById("job-meta-company").innerText;
     return jobTitle + ";" + companyName
   }
+
   function copyFromPracaPl() {
     let jobTitle = document.getElementsByClassName("app-offer__title")[0].innerText;
     let companyName = document.getElementsByClassName("app-offer__employer-link")[0].innerText;
@@ -61,12 +53,17 @@ function copyToClipboard (text) {
     let companyName = document.getElementsByClassName("icl-u-lg-mr--sm icl-u-xs-mr--xs")[0].innerText;
     return jobTitle + ";" + companyName
   }
+
   function multiCopyToClipboard() {
     let today = new Date();
     let currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     var offerURL = window.location.href;
-    if (offerURL.substring(12,24) == "linkedin.com") {
-      var offerData = copyFromLinkedIn();
+    if (offerURL.substring(12,37) == "linkedin.com/jobs/search/") {
+      var offerData = copyFromLinkedInSearchPage();
+      var offerURL = window.location.href.substring(0,46);
+    }
+    else if (offerURL.substring(12,35) == "linkedin.com/jobs/view/") {
+      var offerData = copyFromLinkedInOfferPage();
       var offerURL = window.location.href.substring(0,46);
     } 
     else if (offerURL.substring(8,17) == "neuvoo.pl") {
@@ -85,4 +82,5 @@ function copyToClipboard (text) {
     copyToClipboard(text);
     alert("Copied the text");
   }
+
   multiCopyToClipboard();
