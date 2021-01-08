@@ -21,18 +21,20 @@ Tested on Linux Lubuntu 18.04. Works with browsers:
 - Chrome  
 - Brave  
   
-Copying of offers is supported from these websites:  
+Copying of offers is supported from these pages:  
   
 - [linkedin.com](https://www.linkedin.com/)  
 - [pracuj.pl](https://www.pracuj.pl/)  
 - [praca.pl](https://www.praca.pl/)  
 - [neuvoo.pl](https://neuvoo.pl/)  
   
-Core function copyToClipboard is from [here](https://stackoverflow.com/a/33928558/12474392).  
+Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
   
 Output data sample:  
   
-`2020-7-26;Analityk w zespole Data Processing;Gemius ;https://www.linkedin.com/jobs/view/1954293003/;`  
+```
+2021-1-8;Frontend Developer;Grupa Wirtualna Polska ;https://www.linkedin.com/jobs/view/2332928981/;
+```  
   
 ## Preparation  
   
@@ -46,13 +48,15 @@ Output data sample:
 ## Backlog  
   
 - 2020-6-30  
-  - [**bugfix**] [LinkedIn] works now if company name is not a link  
+  - [**fix**] [LinkedIn] works now if company name is not a link  
   - [**enhancement**] [LinkedIn] cutting url only to the necessary part  
-  - [**bugfix**] [LinkedIn] fixed let / var scoping
+  - [**fix**] [LinkedIn] fixed let / var scoping
 - 2020-7-15
-  - [**bugfix**] [Pracuj.pl] fixed taking company name with "O firmie" - now takes only the name
+  - [**fix**] [Pracuj.pl] fixed taking company name with "O firmie" - now takes only the name
 - 2020-9-5  
   - [**enhancement**] [Indeed.com] added indeed.com  
+- 2021-1-8  
+  - [**fix**] [LinkedIn] updated to new linkedin pages structure  
   
 ## Contact  
   
