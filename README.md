@@ -28,6 +28,12 @@ Copying of offers is supported from these websites:
 - [praca.pl](https://www.praca.pl/)  
 - [neuvoo.pl](https://neuvoo.pl/)  
   
+Core function copyToClipboard is from [here](https://stackoverflow.com/a/33928558/12474392).  
+  
+Output data sample:  
+  
+`2020-7-26;Analityk w zespole Data Processing;Gemius ;https://www.linkedin.com/jobs/view/1954293003/;`  
+  
 ## Preparation  
   
 1. Copy the entire contents of the code file [magic-button-script.js](source/magic-button-script.js)  
