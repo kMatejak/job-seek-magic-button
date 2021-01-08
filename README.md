@@ -16,7 +16,8 @@ Copy job offer data by one click. The data that this script copies from the job 
 - company name  
 - offer link  
   
-Output data sample: `2021-1-8;Frontend Developer;Grupa Wirtualna Polska;https://www.linkedin.com/jobs/view/2332928981/;`  
+Output data sample:  
+`2021-1-8;Frontend Developer;Grupa Wirtualna Polska;https://www.linkedin.com/jobs/view/2332928981/;`  
   
 Tested on Linux Lubuntu 18.04. Works with browsers:  
   
