@@ -16,6 +16,8 @@ Copy job offer data by one click. The data that this script copies from the job 
 - company name  
 - offer link  
   
+Output data sample: `2021-1-8;Frontend Developer;Grupa Wirtualna Polska;https://www.linkedin.com/jobs/view/2332928981/;`  
+  
 Tested on Linux Lubuntu 18.04. Works with browsers:  
   
 - Chrome  
@@ -29,12 +31,6 @@ Copying of offers is supported from these pages:
 - [neuvoo.pl](https://neuvoo.pl/)  
   
 Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
-  
-Output data sample:  
-  
-```
-2021-1-8;Frontend Developer;Grupa Wirtualna Polska ;https://www.linkedin.com/jobs/view/2332928981/;
-```  
   
 ## Preparation  
   
