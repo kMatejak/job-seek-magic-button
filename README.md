@@ -35,10 +35,9 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
   
 ## Preparation  
   
-1. Copy the entire contents of the code file [magic-button-script.js](source/magic-button-script.js)  
-2. Convert it to the bookmarklet format with [https://mrcoles.com/bookmarklet/](https://mrcoles.com/bookmarklet/) or with any other bookmarklet converter
-3. Paste result to URL field in your browser bookmark creator
-4. Enjoy :)  
+1. Copy bookmarklet from from [**here**](bookmarklet/COPYME.md) (converted with [mrcoles.com/bookmarklet/](https://mrcoles.com/bookmarklet/))  
+2. Paste result to URL field in your browser bookmark creator  
+3. Enjoy :)  
   
 ![Helpful screenshot](images/2020-06-30-143035_800x876_scrot.png)  
   
