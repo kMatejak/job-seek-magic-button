@@ -29,7 +29,7 @@ Copying of offers is supported from these pages:
 - [linkedin.com](https://www.linkedin.com/)  
 - [pracuj.pl](https://www.pracuj.pl/)  
 - [praca.pl](https://www.praca.pl/)  
-- [neuvoo.pl](https://neuvoo.pl/)  
+- [indeed.com](https://indeed.com) (works only for job offer pages (not for side view on listed search))
   
 Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
   
@@ -53,6 +53,9 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
   - [**enhancement**] [Indeed.com] added indeed.com  
 - 2021-1-8  
   - [**fix**] [LinkedIn] updated to new linkedin pages structure  
+- 2021-1-11  
+  - [**mod**] [Neuvoo] remove support for neuvoo.pl  
+  - [**mod**] [Indeed] add indeed to readme  
   
 ## Contact  
   
