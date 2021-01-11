@@ -37,12 +37,6 @@ function copyToClipboard (text) {
     return jobTitle + ";" + companyName
   }
 
-  function copyFromNeuvoo() {
-    let jobTitle = document.getElementById("job-meta-title").innerText;
-    let companyName = document.getElementById("job-meta-company").innerText;
-    return jobTitle + ";" + companyName
-  }
-
   function copyFromPracaPl() {
     let jobTitle = document.getElementsByClassName("app-offer__title")[0].innerText;
     let companyName = document.getElementsByClassName("app-offer__employer-link")[0].innerText;
