@@ -49,6 +49,12 @@ function copyToClipboard (text) {
     return jobTitle + ";" + companyName
   }
 
+  function copyFromRocketJobs() {
+    let jobTitle = document.getElementsByClassName("title")[0].innerText;
+    let companyName = document.getElementsByClassName("tile company-name")[0].getElementsByClassName("value")[0].innerText;
+    return jobTitle + ";" + companyName
+  }
+
   function multiCopyToClipboard() {
     let today = new Date();
     let currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -69,9 +75,12 @@ function copyToClipboard (text) {
     else if (offerURL.substring(8,18) == "www.olx.pl") {
       offerData = copyFromOLX();
     }
+    else if (offerURL.substring(8,29) == "rocketjobs.pl/offers/") {
+      offerData = copyFromRocketJobs();
+    }
     const textToCopy = currentDate + ";" + offerData + ";" + offerURL + ";";
     copyToClipboard(textToCopy);
-    alert("Copied the text");
+    alert("Text copied!");
   }
 
   multiCopyToClipboard();
