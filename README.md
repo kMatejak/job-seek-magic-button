@@ -30,6 +30,7 @@ Copying of offers is supported from these pages:
 - [pracuj.pl](https://www.pracuj.pl/)  
 - [praca.pl](https://www.praca.pl/)  
 - [olx.pl](https://www.olx.pl/)  
+- [rocketjobs.pl](https://rocketjobs.pl/)  
   
 Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
   
