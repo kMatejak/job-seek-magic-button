@@ -19,7 +19,7 @@ Copy job offer data by one click. The data that this script copies from the job 
 Output data sample:  
 `2021-1-8;Frontend Developer;Grupa Wirtualna Polska;https://www.linkedin.com/jobs/view/2332928981/;`  
   
-Tested on Linux Lubuntu 18.04. Works with browsers:  
+Tested on browsers:  
   
 - Chrome  
 - Brave  
@@ -29,7 +29,7 @@ Copying of offers is supported from these pages:
 - [linkedin.com](https://www.linkedin.com/)  
 - [pracuj.pl](https://www.pracuj.pl/)  
 - [praca.pl](https://www.praca.pl/)  
-- [indeed.com](https://indeed.com) (works only for job offer pages (not for side view on listed search))
+- [olx.pl](https://www.olx.pl/)  
   
 Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
   
@@ -54,8 +54,13 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
 - 2021-1-8  
   - [**fix**] [LinkedIn] updated to new linkedin pages structure  
 - 2021-1-11  
-  - [**mod**] [Neuvoo] remove support for neuvoo.pl  
-  - [**mod**] [Indeed] add indeed to readme  
+  - [**mod**] [Neuvoo] removed support for neuvoo.pl  
+  - [**mod**] [Indeed] added indeed to readme  
+- 2021-6-22  
+  - [**fix**] [LinkedIn] updated copying from LinkedIn (both)  
+  - [**fix**] [Pracuj.pl] updated copying from PracaPl  
+  - [**enhancement**] [OLX] added OLX.pl
+  - [**mod**] [Indeed] removed support for indeed.com
   
 ## Contact  
   

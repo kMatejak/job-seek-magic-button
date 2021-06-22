@@ -20,13 +20,13 @@ function copyToClipboard (text) {
   }
 
   function copyFromLinkedInSearchPage() {
-    const jobTitle = document.getElementsByClassName('jobs-details-top-card__job-title')[0].innerText;
-    const companyName = document.getElementsByClassName("jobs-details-top-card__company-url")[0].innerText;
+    const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
+    const companyName = document.getElementsByClassName("ember-view t-black t-normal")[0].innerText;
     return jobTitle + ";" + companyName;
   }
 
   function copyFromLinkedInOfferPage() {
-    const jobTitle = document.getElementsByClassName('t-24')[0].innerText;
+    const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
     const companyName = document.getElementById('ember333').innerText;;
     return jobTitle + ";" + companyName;
   }
@@ -39,41 +39,38 @@ function copyToClipboard (text) {
 
   function copyFromPracaPl() {
     let jobTitle = document.getElementsByClassName("app-offer__title")[0].innerText;
-    let companyName = document.getElementsByClassName("app-offer__employer-link")[0].innerText;
+    let companyName = document.getElementsByClassName("app-offer__profile-link")[0].innerText;
     return jobTitle + ";" + companyName
   }
-  function copyFromIndeedCom() {
-    let jobTitle = document.getElementsByClassName("icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title")[0].innerText;
-    let companyName = document.getElementsByClassName("icl-u-lg-mr--sm icl-u-xs-mr--xs")[0].innerText;
+
+  function copyFromOLX() {
+    let jobTitle = document.getElementsByClassName("css-1oarkq2-Text eu5v0x0")[0].innerText;
+    let companyName = " ";
     return jobTitle + ";" + companyName
   }
 
   function multiCopyToClipboard() {
     let today = new Date();
     let currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    var offerURL = window.location.href;
+    let offerData = null;
+    let offerURL = window.location.href;
     if (offerURL.substring(12,37) == "linkedin.com/jobs/search/") {
-      var offerData = copyFromLinkedInSearchPage();
-      var offerURL = window.location.href.substring(0,46);
+      offerData = copyFromLinkedInSearchPage();
     }
     else if (offerURL.substring(12,35) == "linkedin.com/jobs/view/") {
-      var offerData = copyFromLinkedInOfferPage();
-      var offerURL = window.location.href.substring(0,46);
-    } 
-    else if (offerURL.substring(8,17) == "neuvoo.pl") {
-      var offerData = copyFromNeuvoo();
+      offerData = copyFromLinkedInOfferPage();
     }
     else if (offerURL.substring(12,20) == "praca.pl") {
-      var offerData = copyFromPracaPl();
+      offerData = copyFromPracaPl();
     }
     else if (offerURL.substring(12,21) == "pracuj.pl") {
-      var offerData = copyFromPracujPl();
+      offerData = copyFromPracujPl();
     }
-    else if (offerURL.substring(11,21) == "indeed.com") {
-      var offerData = copyFromIndeedCom();
+    else if (offerURL.substring(8,18) == "www.olx.pl") {
+      offerData = copyFromOLX();
     }
-    let text = currentDate + ";" + offerData + ";" + offerURL + ";";
-    copyToClipboard(text);
+    const textToCopy = currentDate + ";" + offerData + ";" + offerURL + ";";
+    copyToClipboard(textToCopy);
     alert("Copied the text");
   }
 
