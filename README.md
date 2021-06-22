@@ -59,8 +59,9 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
 - 2021-6-22  
   - [**fix**] [LinkedIn] updated copying from LinkedIn (both)  
   - [**fix**] [Pracuj.pl] updated copying from PracaPl  
-  - [**enhancement**] [OLX] added OLX.pl
-  - [**mod**] [Indeed] removed support for indeed.com
+  - [**mod**] [Indeed] removed support for indeed.com  
+  - [**enhancement**] [OLX] added OLX.pl  
+  - [**enhancement**] [RocketJobsPL] added rocketjobs.pl  
   
 ## Contact  
   
