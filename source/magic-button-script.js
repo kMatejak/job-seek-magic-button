@@ -22,14 +22,14 @@ function copyToClipboard (text) {
   }
 
   function copyFromLinkedInSearchPage() {
-    const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
-    const companyName = document.getElementsByClassName("ember-view t-black t-normal")[0].innerText;
+    const jobTitle = document.getElementsByClassName("t-16 t-black t-bold truncate")[0].innerText;
+    const companyName = document.getElementsByClassName('mt2')[0].children[0].children[0].innerText.trim();
     return jobTitle + ";" + companyName;
   }
 
   function copyFromLinkedInOfferPage() {
     const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
-    const companyName = document.getElementById('ember333').innerText;;
+    const companyName = document.getElementById('ember45').alt;
     return jobTitle + ";" + companyName;
   }
 
