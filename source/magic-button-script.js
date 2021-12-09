@@ -29,7 +29,7 @@ function copyToClipboard (text) {
 
   function copyFromLinkedInOfferPage() {
     const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
-    const companyName = document.getElementById('ember45').alt;
+    const companyName = document.getElementById('ember46').innerText;
     return jobTitle + ";" + companyName;
   }
 
