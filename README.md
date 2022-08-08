@@ -66,7 +66,9 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
 - 2021-11-10  
   - [**fix**] [LinkedIn] updated copying from LinkedIn (both)  
 - 2021-12-9  
-  - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page) 
+  - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page)  
+- 2022-8-8  
+  - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page)  
   
 ## Contact  
   
