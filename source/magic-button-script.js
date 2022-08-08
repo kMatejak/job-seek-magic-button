@@ -83,7 +83,6 @@ function copyToClipboard (text) {
     }
     const textToCopy = currentDate + ";" + offerData + ";" + offerURL + ";";
     copyToClipboard(textToCopy);
-    alert("Text copied!");
   }
 
   multiCopyToClipboard();
