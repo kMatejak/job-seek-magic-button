@@ -67,6 +67,7 @@ function copyToClipboard (text) {
     }
     else if (offerURL.substring(12,35) == "linkedin.com/jobs/view/") {
       offerData = copyFromLinkedInOfferPage();
+      offerURL = window.location.href.substring(0,46);
     }
     else if (offerURL.substring(12,20) == "praca.pl") {
       offerData = copyFromPracaPl();
