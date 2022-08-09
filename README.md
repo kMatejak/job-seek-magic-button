@@ -42,7 +42,7 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
   
 ![Helpful screenshot](images/2020-06-30-143035_800x876_scrot.png)  
   
-## Backlog  
+## Changelog  
   
 - 2020-6-30  
   - [**fix**] [LinkedIn] works now if company name is not a link  
