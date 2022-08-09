@@ -29,7 +29,7 @@ javascript:(function(){
     }
     return [offerData, offerURL];
   }
-  my_window=window.open('https://script.google.com/macros/s/AKfycbxhzOsPaBdQET8qCZ2ZNB2tpXj7wiZH-q0avgzC8fviB4irnfL0T0RDR9-0hwHP8UmH/exec?jobTitle='+encodeURIComponent(text[0][0])+'&companyName='+encodeURIComponent(text[0][1])+'&url='+encodeURIComponent(text[1]));
-  (window.setTimeout(function(){my_window.close();},3000));
+  my_window=window.open('https://script.google.com/macros/s/<YOUR-WEB-APP-ID>/exec?jobTitle='+encodeURIComponent(text[0][0])+'&companyName='+encodeURIComponent(text[0][1])+'&url='+encodeURIComponent(text[1]));
+  (window.setTimeout(function(){my_window.close();},100));
   void(0);
 })();
