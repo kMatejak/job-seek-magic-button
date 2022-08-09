@@ -6,7 +6,7 @@ javascript:(function(){
   }
   function copyFromLinkedInOfferPage() {
     const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
-    const companyName = document.getElementById('ember25').innerText;
+    const companyName = document.getElementsByClassName('jobs-unified-top-card__company-name')[0].innerText;
     return [jobTitle, companyName];
   }
   function copyFromJustJoinIT() {
