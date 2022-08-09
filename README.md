@@ -9,36 +9,32 @@
   
 ## Description  
   
-Copy job offer data by one click. The data that this script copies from the job page with the semicolon delimiter is:  
-  
+Copy job offer data to Google Spreadsheet by one click:  
 - current date  
 - job title  
 - company name  
 - offer link  
-  
-Output data sample:  
-`2021-1-8;Frontend Developer;Grupa Wirtualna Polska;https://www.linkedin.com/jobs/view/2332928981/;`  
-  
+    
 Tested on browsers:  
-  
-- Chrome  
+    
 - Brave  
   
 Copying of offers is supported from these pages:  
   
 - [linkedin.com](https://www.linkedin.com/)  
-- [pracuj.pl](https://www.pracuj.pl/)  
-- [praca.pl](https://www.praca.pl/)  
-- [olx.pl](https://www.olx.pl/)  
-- [rocketjobs.pl](https://rocketjobs.pl/)  
-  
-Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/33928558/12474392).  
+- ~~pracuj.pl~~  
+- ~~praca.pl~~  
+- ~~olx.pl~~  
+- ~~rocketjobs.pl~~  
+- [justjoin.it](https://justjoin.it/)
   
 ## Preparation  
   
-1. Copy bookmarklet from from [**here**](bookmarklet/COPYME.md) (converted with [mrcoles.com/bookmarklet/](https://mrcoles.com/bookmarklet/))  
+**TODO: add description about Google's Apps Script preparation**  
+  
+1. Copy bookmarklet from from [**here**](bookmarklet/COPYME.md)  
 2. Paste result to URL field in your browser bookmark creator  
-3. Enjoy :)  
+3. ...  
   
 ![Helpful screenshot](images/2020-06-30-143035_800x876_scrot.png)  
   
@@ -69,6 +65,9 @@ Core function copyToClipboard is taken from [here](https://stackoverflow.com/a/3
   - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page)  
 - 2022-8-8  
   - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page)  
+- 2022-8-9  
+  - [**mod**] modified for use by Apps Script (one click to copy to spreadsheet)  
+  - [**enhancement**] [JustJoin.it] added justjoin.it  
   
 ## Contact  
   
