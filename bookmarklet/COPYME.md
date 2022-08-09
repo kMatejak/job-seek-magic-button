@@ -1,1 +1,35 @@
-javascript:(function()%7Bfunction%20copyToClipboard%20(text)%20%7B'use%20strict'%3Bif%20(window.clipboardData%20%26%26%20window.clipboardData.setData)%20%7Breturn%20clipboardData.setData(%22Text%22%2C%20text)%3B%7Delse%20if%20(document.queryCommandSupported%20%26%26%20document.queryCommandSupported(%22copy%22))%20%7Blet%20textarea%20%3D%20document.createElement(%22textarea%22)%3Btextarea.textContent%20%3D%20text%3Btextarea.style.position%20%3D%20%22fixed%22%3Bdocument.body.appendChild(textarea)%3Btextarea.select()%3Btry%20%7Breturn%20document.execCommand(%22copy%22)%3B%7D%20catch%20(ex)%20%7Bconsole.warn(%22Copy%20to%20clipboard%20failed.%22%2C%20ex)%3Breturn%20false%3B%7D%20finally%20%7Bdocument.body.removeChild(textarea)%3B%7D%7D%7Dfunction%20copyFromLinkedInSearchPage()%20%7Bconst%20jobTitle%20%3D%20document.getElementsByClassName(%22t-16%20t-black%20t-bold%20truncate%22)%5B0%5D.innerText%3Bconst%20companyName%20%3D%20document.getElementsByClassName('mt2')%5B0%5D.children%5B0%5D.children%5B0%5D.innerText.trim()%3Breturn%20jobTitle%20%2B%20%22%3B%22%20%2B%20companyName%3B%7Dfunction%20copyFromLinkedInOfferPage()%20%7Bconst%20jobTitle%20%3D%20document.getElementsByClassName('t-24%20t-bold')%5B0%5D.innerText%3Bconst%20companyName%20%3D%20document.getElementById('ember25').innerText%3Breturn%20jobTitle%20%2B%20%22%3B%22%20%2B%20companyName%3B%7Dfunction%20copyFromJustJoinIT()%20%7Bconst%20jobTitle%20%3D%20document.getElementsByClassName('css-1id4k1')%5B0%5D.innerText%3Bconst%20companyName%20%3D%20document.getElementsByClassName('css-l4opor')%5B0%5D.innerText%3Breturn%20jobTitle%20%2B%20%22%3B%22%20%2B%20companyName%3B%7Dfunction%20multiCopyToClipboard()%20%7Blet%20today%20%3D%20new%20Date()%3Blet%20currentDate%20%3D%20today.getFullYear()%2B'-'%2B(today.getMonth()%2B1)%2B'-'%2Btoday.getDate()%3Blet%20offerData%20%3D%20null%3Blet%20offerURL%20%3D%20window.location.href%3Bif%20(offerURL.substring(12%2C37)%20%3D%3D%20%22linkedin.com%2Fjobs%2Fsearch%2F%22)%20%7BofferData%20%3D%20copyFromLinkedInSearchPage()%3B%7Delse%20if%20(offerURL.substring(12%2C35)%20%3D%3D%20%22linkedin.com%2Fjobs%2Fview%2F%22)%20%7BofferData%20%3D%20copyFromLinkedInOfferPage()%3BofferURL%20%3D%20window.location.href.substring(0%2C46)%3B%7Delse%20if%20(offerURL.substring(8%2C27)%20%3D%3D%20%22justjoin.it%2Foffers%2F%22)%20%7BofferData%20%3D%20copyFromJustJoinIT()%3B%7Dconst%20textToCopy%20%3D%20currentDate%20%2B%20%22%3B%22%20%2B%20offerData%20%2B%20%22%3B%22%20%2B%20offerURL%20%2B%20%22%3B%22%3BcopyToClipboard(textToCopy)%3B%7DmultiCopyToClipboard()%7D)()
+javascript:(function(){
+  function copyFromLinkedInSearchPage() {
+    const jobTitle = document.getElementsByClassName("t-16 t-black t-bold truncate")[0].innerText;
+    const companyName = document.getElementsByClassName('mt2')[0].children[0].children[0].innerText.trim();
+    return [jobTitle, companyName];
+  }
+  function copyFromLinkedInOfferPage() {
+    const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;
+    const companyName = document.getElementById('ember25').innerText;
+    return [jobTitle, companyName];
+  }
+  function copyFromJustJoinIT() {
+    const jobTitle = document.getElementsByClassName('css-1id4k1')[0].innerText;
+    const companyName = document.getElementsByClassName('css-l4opor')[0].innerText;
+    return [jobTitle, companyName];
+  }
+  function multiCopyToClipboard() {
+    let offerData = null;
+    let offerURL = window.location.href;
+    if (offerURL.substring(12,37) == "linkedin.com/jobs/search/") {
+      offerData = copyFromLinkedInSearchPage();
+    }
+    else if (offerURL.substring(12,35) == "linkedin.com/jobs/view/") {
+      offerData = copyFromLinkedInOfferPage();
+      offerURL = window.location.href.substring(0,46);
+    }
+    else if (offerURL.substring(8,27) == "justjoin.it/offers/") {
+      offerData = copyFromJustJoinIT();
+    }
+    return [offerData, offerURL];
+  }
+  my_window=window.open('https://script.google.com/macros/s/AKfycbxhzOsPaBdQET8qCZ2ZNB2tpXj7wiZH-q0avgzC8fviB4irnfL0T0RDR9-0hwHP8UmH/exec?jobTitle='+encodeURIComponent(text[0][0])+'&companyName='+encodeURIComponent(text[0][1])+'&url='+encodeURIComponent(text[1]));
+  (window.setTimeout(function(){my_window.close();},3000));
+  void(0);
+})();
