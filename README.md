@@ -27,6 +27,7 @@ Copying of offers is supported from these pages:
 - ~~olx.pl~~  
 - ~~rocketjobs.pl~~  
 - [justjoin.it](https://justjoin.it/)
+- [bulldogjob.pl](https://bulldogjob.pl/)
   
 ## Preparation  
   
@@ -68,6 +69,8 @@ Copying of offers is supported from these pages:
 - 2022-8-9  
   - [**mod**] modified for use by Apps Script (one click to copy to spreadsheet)  
   - [**enhancement**] [JustJoin.it] added justjoin.it  
+- 2022-8-12    
+  - [**enhancement**] [BulldogJob.pl] added bulldogjob.pl  
   
 ## Contact  
   
