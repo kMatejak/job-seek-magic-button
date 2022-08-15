@@ -14,6 +14,11 @@ javascript:(function(){
     const companyName = document.getElementsByClassName('css-l4opor')[0].innerText;
     return [jobTitle, companyName];
   }
+  function copyFromBulldogJob() {
+    const jobTitle = document.getElementsByTagName("h1")[0].innerText;
+    const companyName = document.getElementsByTagName("h2")[0].innerText;
+    return [jobTitle, companyName];
+  }
   function multiCopyToClipboard() {
     let offerData = null;
     let offerURL = window.location.href;
@@ -26,6 +31,9 @@ javascript:(function(){
     }
     else if (offerURL.substring(8,27) == "justjoin.it/offers/") {
       offerData = copyFromJustJoinIT();
+    }
+    else if (offerURL.substring(8,22) == "bulldogjob.pl/") {
+      offerData = copyFromBulldogJob();
     }
     return [offerData, offerURL];
   }
