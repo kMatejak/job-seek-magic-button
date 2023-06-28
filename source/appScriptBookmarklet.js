@@ -1,7 +1,7 @@
 javascript:(function(){
   function copyFromLinkedInSearchPage() {
-    const jobTitle = document.getElementsByClassName("t-16 t-black t-bold truncate")[0].innerText;
-    const companyName = document.getElementsByClassName('mt2')[0].children[0].children[0].innerText.trim();
+    const jobTitle = document.getElementsByClassName("t-24 t-bold jobs-unified-top-card__job-title")[0].innerText;
+    const companyName = document.getElementById("ember158").innerText;
     return [jobTitle, companyName];
   }
   function copyFromLinkedInOfferPage() {
@@ -22,7 +22,7 @@ javascript:(function(){
   function multiCopyToClipboard() {
     let offerData = null;
     let offerURL = window.location.href;
-    if (offerURL.substring(12,37) == "linkedin.com/jobs/search/") {
+    if (offerURL.substring(12,42) == "linkedin.com/jobs/collections/") {
       offerData = copyFromLinkedInSearchPage();
     }
     else if (offerURL.substring(12,35) == "linkedin.com/jobs/view/") {
