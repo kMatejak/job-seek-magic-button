@@ -70,7 +70,9 @@ Copying of offers is supported from these pages:
   - [**mod**] modified for use by Apps Script (one click to copy to spreadsheet)  
   - [**enhancement**] [JustJoin.it] added justjoin.it  
 - 2022-8-12    
-  - [**enhancement**] [BulldogJob.pl] added bulldogjob.pl  
+  - [**enhancement**] [BulldogJob.pl] added bulldogjob.pl
+- 2023-6-28  
+  - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page and search page)  
   
 ## Contact  
   
