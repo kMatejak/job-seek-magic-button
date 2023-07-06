@@ -73,6 +73,8 @@ Copying of offers is supported from these pages:
   - [**enhancement**] [BulldogJob.pl] added bulldogjob.pl
 - 2023-6-28  
   - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page and search page)  
+- 2023-7-6  
+  - [**enhancement**] [Pracuj.pl] added pracuj.pl (offer page)  
   
 ## Contact  
   
