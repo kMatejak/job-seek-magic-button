@@ -75,6 +75,8 @@ Copying of offers is supported from these pages:
   - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page and search page)  
 - 2023-7-6  
   - [**enhancement**] [Pracuj.pl] added pracuj.pl (offer page)  
+- 2023-8-16  
+  - [**fix**] [LinkedIn] fix copying from LinkedIn (offer page and search page) 
   
 ## Contact  
   

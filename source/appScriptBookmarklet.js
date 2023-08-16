@@ -1,12 +1,12 @@
 javascript:(function(){  
   function copyFromLinkedInSearchPage() {    
     const jobTitle = document.getElementsByClassName("t-24 t-bold jobs-unified-top-card__job-title")[0].innerText;    
-    const companyName = document.getElementById("ember158").innerText;    
+    const companyName = document.getElementsByClassName("app-aware-link ")[6].innerText;    
     return [jobTitle, companyName];  
   }  
   function copyFromLinkedInOfferPage() {    
     const jobTitle = document.getElementsByClassName('t-24 t-bold')[0].innerText;    
-    const companyName = document.getElementsByClassName('jobs-unified-top-card__company-name')[0].innerText;    
+    const companyName = document.getElementsByClassName('app-aware-link')[7].innerText;   
     return [jobTitle, companyName];  
   }  
   function copyFromJustJoinIT() {    
