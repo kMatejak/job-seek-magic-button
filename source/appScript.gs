@@ -1,5 +1,5 @@
 function doGet(request) {
-  const ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/14nGp1ZEPuAYLRw9CMIckxsw_-_76RSNYBG5JdWJTTAA/edit");
+  const ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/YOUR-SPREADSHEET-ID/edit");
   const sheet = ss.getSheets()[0];
   const headers = ["timestamp", "jobTitle", "companyName", "url"];
 
